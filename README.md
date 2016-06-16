@@ -1,2 +1,2 @@
 # terminal
-Creating a website terminal using JS
+An attempt to make a website look like terminal.
