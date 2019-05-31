@@ -35,9 +35,8 @@ function abt(temp){
             echo("You can mail be by <br/> clickin here <a href = 'mailto:iakashchavan@gmail.com>iakashchavan@gmail.com</a>'");
             break;
         default:
-            echo("My Name is Akash and i write code; welcome to my website");
+            echo("Hello, I'm Akash Chavan, a Research Assistant in the Chemical Engineering department of IIT Bombay.Type `help` to see what all commands are available");
             break;
-
     }
 }
 function execute(command){
@@ -46,10 +45,11 @@ function execute(command){
     if(cmd[command]){
         cmd[command]();
     }else if(abouts.indexOf(command)!==-1){
-        abt(command);
+        stdin.focus();
     }else if(command){
         echo("bash: command not found: "+command+"<br>try 'help' to find out commands which can help you");
     }
+    stdin.focus();
     cmdHist.splice(1,0,command);
     if(cmdHist.length > 32)
         cmdHist.pop();
@@ -57,6 +57,7 @@ function execute(command){
     terminal.scrollTop = terminal.scrollHeight;
 }
 document.addEventListener("DOMContentLoaded",function(event){
+    abt();
     stdin.addEventListener("keydown",function(event){
         switch(event.keyCode){
             case 13:
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded",function(event){
 });
 
 function clear(){
-    strout.innerHTML = "";
+    stdout.innerHTML = "";
 }
 function help(){
     echo("The available commands are:");
