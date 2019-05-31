@@ -45,6 +45,7 @@ function execute(command){
     if(cmd[command]){
         cmd[command]();
     }else if(abouts.indexOf(command)!==-1){
+        abt(command);
         stdin.focus();
     }else if(command){
         echo("bash: command not found: "+command+"<br>try 'help' to find out commands which can help you");
