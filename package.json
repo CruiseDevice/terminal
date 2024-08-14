@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^5.5.4"
   }
 }
