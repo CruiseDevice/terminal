@@ -81,6 +81,11 @@ body {
     border: 0;
     cursor: default;
     color: white;
+    caret-color: #00ff00;
+}
+
+#stdin:focus {
+    animation: blink 1s infinite;
 }
 
 a {
@@ -103,4 +108,109 @@ a:hover {
 ::selection {
     background-color: rgba(220, 220, 204, 0.99);
     color: #3c3b37;
+}
+
+/* ASCII Art Styling */
+.ascii-art {
+    color: #00ff00;
+    font-size: 8px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* Command Styling */
+.command-output {
+    color: #7ec699;
+    font-weight: bold;
+}
+
+.command-name {
+    color: #8ac6f2;
+    padding-left: 10px;
+}
+
+.user-input {
+    color: #ffffff;
+}
+
+.error-msg {
+    color: #ff6b6b;
+}
+
+.welcome-msg {
+    color: #dcdccc;
+}
+
+.highlight {
+    color: #ffcc66;
+    font-weight: bold;
+}
+
+/* File and Directory Styling */
+.file {
+    color: #5fd7ff;
+    font-weight: bold;
+}
+
+/* Project Styling */
+.project-name {
+    color: #ffcc66;
+    font-weight: bold;
+}
+
+/* Skills Styling */
+.skill-category {
+    color: #ff79c6;
+    font-weight: bold;
+}
+
+/* Neofetch Styling */
+.neofetch-ascii {
+    color: #50fa7b;
+}
+
+.neofetch-label {
+    color: #8be9fd;
+    font-weight: bold;
+}
+
+.neofetch-key {
+    color: #ff79c6;
+    font-weight: bold;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0%, 49% {
+        caret-color: #00ff00;
+    }
+    50%, 100% {
+        caret-color: transparent;
+    }
+}
+
+/* Smooth terminal scrolling */
+#terminal {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+/* Scrollbar styling */
+#terminal::-webkit-scrollbar {
+    width: 8px;
+}
+
+#terminal::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+#terminal::-webkit-scrollbar-thumb {
+    background: #6f6f6f;
+    border-radius: 4px;
+}
+
+#terminal::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
 }
